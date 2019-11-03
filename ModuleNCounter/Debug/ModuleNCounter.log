@@ -1,0 +1,6 @@
+﻿  ModuleCounter.cpp
+  ModuleNCounter.cpp
+C:\Users\grefi\source\repos\ModuleNCounter\ModuleNCounter\ModuleDigit.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
+C:\Users\grefi\source\repos\ModuleNCounter\ModuleNCounter\ModuleDigit.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  ModuleNCounter.vcxproj -> C:\Users\grefi\source\repos\ModuleNCounter\Debug\ModuleNCounter.exe
