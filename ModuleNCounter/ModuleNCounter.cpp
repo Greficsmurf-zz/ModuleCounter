@@ -15,8 +15,8 @@ int main()
 	ModuleDigit* digit = new ModuleDigit(10, "TenCounter");
 	ModuleCounter counter(*digit);
 	for (int i = 0; i < 20; i++) {
-		++counter;
-		
+		counter++;
 		cout << "Number is = " << counter.getValue() << "\n\n";
+		
 	}
 }

@@ -7,7 +7,11 @@ using namespace std;
 class ModuleCounter
 {
 public:
-	ModuleCounter &operator++();
+	ModuleCounter& operator++();
+	ModuleCounter operator--();
+
+	ModuleCounter operator++(int);
+	ModuleCounter operator--(int);
 
 	ModuleCounter(ModuleDigit& digit) {
 		_digit = digit;
@@ -36,4 +40,33 @@ ModuleCounter& ModuleCounter::operator++() {
 		currentValue = 0;
 	}
 	return *this;
+}
+inline
+ModuleCounter ModuleCounter::operator++(int)
+{
+	ModuleCounter c = *this;
+	currentValue += _digit.getIncValue();
+	if (currentValue == _digit.getMaxValue()) {
+		currentValue = 0;
+	}
+	return c;
+}
+inline
+ModuleCounter ModuleCounter::operator--()
+{
+	currentValue -= _digit.getIncValue();
+	if (currentValue == _digit.getMaxValue()) {
+		currentValue = 0;
+	}
+	return *this;
+}
+inline
+ModuleCounter ModuleCounter::operator--(int)
+{
+	ModuleCounter c = *this;
+	currentValue -= _digit.getIncValue();
+	if (currentValue == _digit.getMaxValue()) {
+		currentValue = 0;
+	}
+	return c;
 }
